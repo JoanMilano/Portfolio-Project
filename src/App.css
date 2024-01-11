@@ -76,8 +76,7 @@ nav.navbar {
   nav.navbar .navbar-nav a.nav-link.navbar-link.active {
       opacity: 1;
   }
- .logo {
- }
+
   span.navbar-text {
       display: flex;
       align-items: center;
