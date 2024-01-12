@@ -52,7 +52,7 @@ const onFormUpdate = (category, value) => {
 const handleSubmit = async (e) => { // asynchronous programming !!???
     e.preventDefault(); // so page deosnt reload when form is submitted
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:3000/", { // path to info 
+    let response = await fetch("http://localhost:3000/contact", { // path to info 
       method: "POST", // sends HTTP POST request to server at ^^
       headers: {
         "Content-Type": "application/json;charset=utf-8", // translates to JSON
@@ -61,7 +61,8 @@ const handleSubmit = async (e) => { // asynchronous programming !!???
     });
 
 setButtonText("Send"); // when done sending set button back send
- let result = await response.json(); // waiting for response in json formmat?? 
+ let result = await response.json();
+ console.log(response); // waiting for response in json formmat?? 
  setFormDetails(formInitialDetails); // clear form 
  if (result.code === 200) { // code from server when sent successfully 
     setStatus({ success: true, message: 'Message sent successfully.'}); 
