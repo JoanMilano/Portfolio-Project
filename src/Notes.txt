@@ -1,0 +1,21 @@
+ github:
+ branches: for working on specific areas of
+  the code without updating main branch.
+  while in that branch you have the version
+  of the code from when it was created to
+   what your creating/deleting. when 
+   switching to a dif branch those edits 
+   stay in the branch until their merged 
+   into another branch (not just the main)
+
+  merge: branch > merge into current branch
+  to merge external branches into main. start 
+  in the branch that you want the other branch into  
+  (start in main and merge v2)
+
+   pull requests: used on teams so the code
+    can be reviewed before added to main. 
+    the code branch itself is first published 
+    where other people part of the project
+     can view, edit, and merge it into the main 
+
