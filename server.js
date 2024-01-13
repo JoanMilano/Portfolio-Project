@@ -70,3 +70,5 @@ const contactEmail = nodemailer.createTransport({
         }
       });
     });
+ 
+    export default Server; 
