@@ -23,7 +23,7 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0); // keeps track of which WORD is currently being proccessed in the animation via its index 
     const [isDeleting, setIsDeleting] = useState(false); // is word being deleted or not 
-    const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer", "Computer Nerd"]; // words to be rotate in the animation 
+    const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer", "Digital Marketer"]; // words to be rotate in the animation 
     const [text, setText] = useState(''); // continue-ally updated with each letter character as the animation types/deletes
     const [delta, setDelta] = useState(300 - Math.random() * 100);  // the pace of typing (calculated randomly initially) by milliseconds
     const period = 2000; // how much time it take for one string value to be typed out and deleted (full animation cycle)
@@ -70,7 +70,7 @@ export const Banner = () => {
                     <h1>{'Hello I am jones'}</h1>
                     <h2 className="wrap">{text}</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <button onClick={() => console.group('connect')}>Let's connect <ArrowRightCircle size={25}/></button>
+                    <button onClick={() => console.group('connected')}>Let's connect <ArrowRightCircle size={25}/></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Header Img" />
