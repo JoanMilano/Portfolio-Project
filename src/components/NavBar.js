@@ -58,9 +58,9 @@ return (
               </Nav>
               <span className="navbar-text">
                 <div className="social-icon">
-                    <a href="">  <img src={navIcon1} alt=""></img></a>
-                    <a href="">  <img src={navIcon2} alt=""></img></a>
-                    <a href="">  <img src={navIcon3} alt=""></img></a>
+                    <a href="">  <img src={navIcon1} alt="linkedIn icon"></img></a>
+                    <a href="">  <img src={navIcon2} alt="Facebook icon"></img></a>
+                    <a href="">  <img src={navIcon3} alt="instagram icon"></img></a>
                 </div>
                 <button className="vvd" onClick={() => console.log('connect')}><span>Let's Connect</span></button>
               </span>
