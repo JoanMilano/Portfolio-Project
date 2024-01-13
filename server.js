@@ -24,7 +24,7 @@ const nodemailer = require("nodemailer"); // library for sending emails using No
 const app = express(); // constant to apply express 
 app.use(cors());
 app.use(express.json()); // parses incoming JSON data into JS 
-app.use("/contact", router); // defines a route 
+app.use("/", router); // defines a route 
 app.listen(3000, () => console.log("Server Running")); // listen on port 3000, logs message indicating server is running
 
 // email address that emails will be sent to
@@ -71,4 +71,3 @@ const contactEmail = nodemailer.createTransport({
       });
     });
  
-    export default Server; 
