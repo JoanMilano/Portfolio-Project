@@ -71,7 +71,7 @@ setButtonText("Send"); // when done sending set button back send
  }
 };  
         return (
-            <section className="contact" id="connect">
+            <section className="contact" id="get-in-touch">
                 <Container>
                     <Row className="align-items-center">
                         <Col md={6}>
