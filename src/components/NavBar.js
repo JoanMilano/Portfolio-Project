@@ -62,7 +62,7 @@ return (
                     <a href="">  <img src={navIcon2} alt="Facebook link"></img></a>
                     <a href="">  <img src={navIcon3} alt="instagram link"></img></a>
                 </div>
-                <button className="vvd" onClick={() => console.log('connected')}><span>Let's Connect</span></button>
+                <button className="connect-button"><a  href="#get-in-touch"><span>Let's Connect</span></a></button>
               </span>
           </Navbar.Collapse>
         </Container>
