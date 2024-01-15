@@ -26,7 +26,7 @@ export const Banner = () => {
     const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer", "Digital Marketer"]; // words to be rotate in the animation 
     const [text, setText] = useState(''); // continue-ally updated with each letter character as the animation types/deletes
     const [delta, setDelta] = useState(300 - Math.random() * 100);  // the pace of typing (calculated randomly initially) by milliseconds
-    const period = 2000; // how much time it take for one string value to be typed out and deleted (full animation cycle)
+    const pause = 2000; // how much time it take for one string value to be typed out and deleted (full animation cycle)
 
 
     useEffect(() => { // function to create animation 
@@ -53,7 +53,7 @@ export const Banner = () => {
 
         if (!isDeleting && updatedText === fullText) {
             setIsDeleting(true); 
-            setDelta(period); // introduces 2000 ms pause b4 next stage
+            setDelta(pause); // introduces 2000 ms pause b4 next stage
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false); 
             setLoopNum(loopNum + 1); // last step in the process in order to move on to next words index
