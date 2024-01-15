@@ -68,7 +68,6 @@ export const Projects = () => {
                             return (
                               <ProjectCard
                                 key={index}
-                                alt="Project Img"
                                 {...project}
                                 />
                             )
