@@ -12,7 +12,6 @@ JSON (Javascript Object Notation): both
 user & computer can read, turned into a string 
 then back to JS object b4 executed
 */
-console.log("Starting server...");
 // importing modules we are using
 const express = require("express"); // Express.js main library
 const router = express.Router(); // allows me to define routes 
@@ -32,7 +31,7 @@ const contactEmail = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: "joan.milano829@gmail.com", // use own account
-      pass: "jones_M_$@471012" // create application password in gmail (if 2-factor-authentication)
+      pass: "wqsy cybw rtxv dewf" // create application password in gmail (if 2-factor-authentication)
     },
   });
 
@@ -47,10 +46,16 @@ const contactEmail = nodemailer.createTransport({
   
   // formatting data from body to mail format 
   router.post("/contact", (req, res) => {
+    try {
     const name = req.body.firstName + req.body.lastName;
     const email = req.body.email;
     const message = req.body.message;
     const phone = req.body.phone;
+
+      if (!name || !email || !message || !phone) {
+        throw new Error("Incomplete form data"); 
+      }
+
     const mail = {
       from: name,
       to: "joan.milano829@gmail.com",
@@ -64,10 +69,15 @@ const contactEmail = nodemailer.createTransport({
     // express server sends email via node mailer
     contactEmail.sendMail(mail, (error) => {
         if (error) {
-          res.json(error);   //.json(error); // if its error we send back error
+          console.log("Error sending email", error); 
+          res.status(500).json({ code: 500, status: "Error sending email" });  // if its error we send back error
         } else {
-          res.json({ code: 200, status: "Message Sent" }); // if successful send verification code and status = Message Sent 
+          res.status(200).json({ code: 200, status: "Message Sent" }); // if successful send verification code and status = Message Sent 
         }
       });
+    }   catch (error) {
+      console.error("Error processing form data", error); 
+      res.status(400).json({ code: 400, status: "Bad Request" }); 
+        }
     });
  
