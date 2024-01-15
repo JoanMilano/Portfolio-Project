@@ -35,7 +35,7 @@ const contactEmail = nodemailer.createTransport({
     },
   });
 
-  // verify if its running
+  // verify if email is connected
   contactEmail.verify((error) => {
     if (error) {
       console.log(error);
