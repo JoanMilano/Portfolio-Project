@@ -45,7 +45,7 @@ const contactEmail = nodemailer.createTransport({
     }
   });
   
-  // formatting darta from body to mail formatt  
+  // formatting data from body to mail format 
   router.post("/contact", (req, res) => {
     const name = req.body.firstName + req.body.lastName;
     const email = req.body.email;
