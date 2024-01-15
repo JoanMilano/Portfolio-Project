@@ -23,7 +23,7 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0); // keeps track of which WORD is currently being proccessed in the animation via its index 
     const [isDeleting, setIsDeleting] = useState(false); // is word being deleted or not 
-    const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer", "Digital Marketer"]; // words to be rotate in the animation 
+    const toRotate = [ "Web Dev. & Design", "E-commerce", "Digital Marketing", ]; // words to be rotate in the animation 
     const [text, setText] = useState(''); // continue-ally updated with each letter character as the animation types/deletes
     const [delta, setDelta] = useState(300 - Math.random() * 100);  // the pace of typing (calculated randomly initially) by milliseconds
     const pause = 2000; // how much time it take for one string value to be typed out and deleted (full animation cycle)
@@ -73,7 +73,7 @@ export const Banner = () => {
                     <button><ArrowRightCircle size={25}/></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="Header Img" />
+                        
                     </Col>
                 </Row>
             </Container>
