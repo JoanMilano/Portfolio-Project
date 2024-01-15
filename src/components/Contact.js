@@ -41,7 +41,6 @@ const [buttonText, setButtonText] = useState('Send');  // button default says se
 const [status, setStatus] = useState({}); // if or if not message has been send successfully
 
 
-// que es???
 const onFormUpdate = (category, value) => {
     setFormDetails({
       ...formDetails,
