@@ -71,7 +71,7 @@ setButtonText("Send"); // when done sending set button back send
  }
 };  
         return (
-            <section className="contact" id="connect">
+            <section className="contact" id="get-in-touch">
                 <Container>
                     <Row className="align-items-center">
                         <Col md={6}>
@@ -79,7 +79,7 @@ setButtonText("Send"); // when done sending set button back send
                         </Col>
                         <Col md={6}>
                             <h2>Get In Touch</h2> 
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleSubmit} id="contact-form">
                                 <Row>
                                     <Col sm={6} className="px-1">
                                         <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />

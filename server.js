@@ -80,3 +80,4 @@ const contactEmail = nodemailer.createTransport({
       res.status(400).json({ code: 400, status: "Bad Request" }); 
         }
     });
+ 

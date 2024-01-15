@@ -32,7 +32,7 @@ export const NavBar = () => {
       }
     }
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll); // window === webpage. global JS variable
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [])
@@ -58,11 +58,11 @@ return (
               </Nav>
               <span className="navbar-text">
                 <div className="social-icon">
-                    <a href="">  <img src={navIcon1} alt="linkedIn icon"></img></a>
-                    <a href="">  <img src={navIcon2} alt="Facebook icon"></img></a>
-                    <a href="">  <img src={navIcon3} alt="instagram icon"></img></a>
+                    <a href="">  <img src={navIcon1} alt="linkedIn link"></img></a>
+                    <a href="">  <img src={navIcon2} alt="Facebook link"></img></a>
+                    <a href="">  <img src={navIcon3} alt="instagram link"></img></a>
                 </div>
-                <button className="vvd" onClick={() => console.log('connect')}><span>Let's Connect</span></button>
+                <button className="connect-button"><a  href="#get-in-touch"><span>Let's Connect</span></a></button>
               </span>
           </Navbar.Collapse>
         </Container>
