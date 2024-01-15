@@ -74,11 +74,11 @@ setButtonText("Send"); // when done sending set button back send
                 <Container>
                     <Row className="align-items-center">
                         <Col md={6}>
-                            <img src={contactImg} alt="Contact Us"/>
+                            <img src={contactImg} alt="Get in Touch"/>
                         </Col>
                         <Col md={6}>
                             <h2>Get In Touch</h2> 
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleSubmit} id="contact-form">
                                 <Row>
                                     <Col sm={6} className="px-1">
                                         <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
