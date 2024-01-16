@@ -15,49 +15,47 @@ managing subscriptioons
 */ 
 
 
-import { useState, useEffect } from "react"; // for animation
+import { useState, useEffect } from "react"; 
 import { Container, Row, Col } from "react-bootstrap"; 
 import headerImg from "../assets/imgs/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 
 export const Banner = () => {
-    const [loopNum, setLoopNum] = useState(0); // keeps track of which WORD is currently being proccessed in the animation via its index 
-    const [isDeleting, setIsDeleting] = useState(false); // is word being deleted or not 
-    const toRotate = [ "Web Dev. & Design", "E-commerce", "Digital Marketing", ]; // words to be rotate in the animation 
-    const [text, setText] = useState(''); // continue-ally updated with each letter character as the animation types/deletes
-    const [pace, setPace] = useState(300 - Math.random() * 100);  // the pace of typing (calculated randomly initially) by milliseconds
-    const pause = 2000; // how much time it take for one string value to be typed out and deleted (full animation cycle)
+    const [loopNum, setLoopNum] = useState(0); 
+    const [isDeleting, setIsDeleting] = useState(false); 
+    const toRotate = [ "Web Dev. & Design", "E-commerce", "Digital Marketing", "SEO", "social media management", "UI/UX Designer" ]; 
+    const [text, setText] = useState(''); 
+    const [pace, setPace] = useState(300 - Math.random() * 100);  
+    const pause = 2000; 
 
-
-    useEffect(() => { // function to create animation 
+    useEffect(() => { 
         let ticker = setInterval(() => { 
-            tick(); // when tick is being fire off  
-            }, pace) // (setInterval value) time inbetween each Interval value
+            tick(); 
+            }, pace) // (setInterval value) 
     
             return () => { clearInterval(ticker)};  // clean code and avoid memory leak
      
     }, [text]) // (useEffect value) when this changes the effect is re-run
 
     const tick = () => {
-        let i = loopNum % toRotate.length; // i = index. index of current word and increments (to next word) only within the bounds of the array  
-        let fullText = toRotate[i]; // to keep track of fullText 
-        let updatedText = isDeleting ? // updateText is the core of the deleting/typing animation
-        fullText.substring(0, text.length - 1) : // if deleting then -
-        fullText.substring(0, text.length + 1) // if not deleting then +
+        let i = loopNum % toRotate.length; 
+        let fullText = toRotate[i];
+        let updatedText = isDeleting ? 
+        fullText.substring(0, text.length - 1) : 
+        fullText.substring(0, text.length + 1) 
 
-        setText(updatedText); // update state of text
-
-        if (isDeleting) { // if deleting then pace (pace) is faster 
+        setText(updatedText); 
+        if (isDeleting) { 
             setPace(prevpace => prevpace / 2)
         }
 
         if (!isDeleting && updatedText === fullText) {
             setIsDeleting(true); 
-            setPace(pause); // introduces 2000 ms pause b4 next stage
+            setPace(pause); 
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false); 
-            setLoopNum(loopNum + 1); // last step in the process in order to move on to next words index
-            setPace(500); // introduces 500 ms pause b4 next stage
+            setLoopNum(loopNum + 1); 
+            setPace(500); 
         }
     }
 
@@ -67,10 +65,10 @@ export const Banner = () => {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">Welcome to my Portfolio</span>
-                    <h1>{'Hello I am jones'}</h1>
-                    <h2 className="wrap">{text}</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <button>Let's connect<ArrowRightCircle size={25}/></button>
+                    <h1>{`Hello I am Jones`}</h1>
+                    <h2 className="wrap">| {text}</h2>
+                    <p>Elevate your brand with a skilled freelance digital marketer and web developer. Crafting strategic digital campaigns, optimizing SEO, managing social media, and building dynamic websites. Experience a comprehensive online presence that not only captivates but also converts. Let's synergize marketing prowess with web development for unparalleled digital success.</p>
+                   <button>Let's connect<a href="#get-in-touch"><ArrowRightCircle size={25}/></a></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                     <img src={headerImg} alt="Header Img" />
