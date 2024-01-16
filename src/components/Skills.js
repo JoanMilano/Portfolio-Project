@@ -34,11 +34,12 @@ export const Skills =  () => {
            <Col>
             <div className='skill-bx'>
               <h2>Capabilities</h2>
-               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+               <p>
+Mastering SEO for heightened online visibility, I excel in crafting impactful brand identities. Proficient in strategic social media management, I bring a creative touch to UI/UX design, and possess extensive experience in seamless e-commerce development. A versatile professional, I drive comprehensive digital strategies for business growth across diverse domains.</p>
                <Carousel responsive={responsive} infinite={true} className='skills-slider'>
                 <div className='item'>
                     <img src={meter1} alt='Image' />
-                    <h5>Web Development</h5>
+                    <h5>SEO</h5>
                 </div>
                 <div className='item'>
                     <img src={meter2} alt='Image' />
@@ -46,15 +47,15 @@ export const Skills =  () => {
                 </div>
                 <div className='item'>
                     <img src={meter3} alt='Image' />
-                    <h5>Logo design</h5>
+                    <h5>Social Media Managment</h5>
                 </div>
                 <div className='item'>
                     <img src={meter2} alt='Image' />
-                    <h5>Web Development</h5>
+                    <h5>UI/UX Design & Development</h5>
                 </div>
                 <div className='item'>
                     <img src={meter1} alt='Image' />
-                    <h5>Web Development</h5>
+                    <h5>e-commerce</h5>
                 </div>
                </Carousel>
                </div>
