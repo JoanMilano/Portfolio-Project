@@ -62,6 +62,13 @@ nav.navbar {
       width: 9%;
       margin-right: 130px;
   }
+  nav.navbar .navbar-brand img {
+    width: 130px;
+    position: relative;
+    box-shadow: 0px 0px 10px 5px #4A2FBD;
+    margin-bottom: 5px;
+
+  }
   nav.navbar .navbar-nav .nav-link.navbar-link {
     font-weight: 400;
     color: #fff !important;
@@ -234,8 +241,8 @@ nav.navbar {
     display: inline-block;
   }
   .banner h1 {
-    font-size: 65px;
-    font-weight: 700;
+    font-size: 50px;
+    font-weight: 500;
     letter-spacing: 0.8px;
     line-height: 1;
     margin-bottom: 20px;
@@ -268,6 +275,10 @@ nav.navbar {
   .banner button:hover svg {
     margin-left: 25px;
   }
+  .banner button a {
+      color: inherit; /* Inherit color on hover */
+      text-decoration: none; /* Remove underline on hover */
+  }
   .banner img {
     animation: updown 3s linear infinite;
   }
@@ -285,8 +296,14 @@ nav.navbar {
   .txt-rotate > .wrap {
     border-right: 0.08em solid #666;
   }
-
-
+  @media screen and (max-width: 800px) {
+    .banner img {
+      width: 300px; 
+      margin-left: 40%;
+      margin-top: -13%;
+      margin-bottom: -2%;
+    }
+  }
 /************ Skills Css ************/
 .skill {
     padding: 0 0 50px 0;
