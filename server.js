@@ -5,8 +5,21 @@ user inputs in portfolio to my email
 general questions: 
 1. how deos this backend server run in relation to my front-end web app?
 
-bugs: 
-server running check === not running 
+node.js uses:
+back-end for SPA's (this girly)
+creating web servers 
+high preformance API's development
+event driven architecture & support websockets for real-time app.
+microservices 
+data streaming 
+data processing & manipulation 
+auto. & scripting 
+IoT
+proxy servers 
+CMS (Content Management Systems)
+choice for serverless computing platform ex: AWS or Lambda
+
+
 
 JSON (Javascript Object Notation): both
 user & computer can read, turned into a string 
