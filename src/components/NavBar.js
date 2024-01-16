@@ -8,7 +8,7 @@ this cause increasing memory usage and slower and worse performance
 */
 import { useState, useEffect } from 'react'; 
 import { Navbar, Container, Nav } from "react-bootstrap"
-import logo from '../assets/imgs/logo.svg'
+ import logo from '../assets/imgs/logo.webp'
 import navIcon1 from '../assets/imgs/nav-icon1.svg'
 import navIcon2 from '../assets/imgs/nav-icon2.svg'
 import navIcon3 from '../assets/imgs/nav-icon3.svg'
