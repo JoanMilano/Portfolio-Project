@@ -47,7 +47,7 @@ export const Projects = () => {
           <Col size={12}>
               <div>
                 <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Within the projects showcased below, discover instances where I've significantly contributed to, developed, or refined various projects, prioritizing optimization enhancements. Specializing in integrating inventive functionalities to elevate both user interface and experience, each project underscores a dedication to excellence and user satisfaction.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
