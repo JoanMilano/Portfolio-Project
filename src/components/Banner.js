@@ -23,7 +23,7 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0); 
     const [isDeleting, setIsDeleting] = useState(false); 
-    const toRotate = [ "Web Dev. & Design", "E-commerce", "Digital Marketing", "SEO", "social media management", "UI/UX Designer" ]; 
+    const toRotate = [ "Web Dev. & Design", "E-Commerce", "Digital Marketing", "SEO", "Social Media Management", "UI/UX Designer" ]; 
     const [text, setText] = useState(''); 
     const [pace, setPace] = useState(300 - Math.random() * 100);  
     const pause = 2000; 
