@@ -6,7 +6,7 @@ general questions:
 1. how deos this backend server run in relation to my front-end web app?
 
 node.js uses:
-back-end for SPA's (this girly)
+back-end for SPA's
 creating web servers 
 high preformance API's development
 event driven architecture & support websockets for real-time app.
