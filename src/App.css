@@ -424,6 +424,9 @@ nav.navbar {
     overflow: hidden;
     margin-bottom: 24px;
   }
+  .proj-imgbx img {
+    height: 380px;
+  }
   .proj-imgbx::before {
     content: "";
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
