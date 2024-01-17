@@ -94,14 +94,16 @@ setButtonText("Send"); // when done sending set button back send
                                     </Col>
                                     <Col>
                                      <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)} />
-                                     <button type="submit"><span>{buttonText}</span></button>
                                     </Col>
+                                    <Col>
+                                    <button type="submit"><span>{buttonText}</span></button>
                                     {
                                         status.message && 
                                         <Col>
                                          <p className={`alert ${status.success === false ? 'alert-danger' : 'alert-success'}`}>{status.message}</p>
                                         </Col>
                                     }
+                                    </Col>
                                 </Row>
                             </form>
                         </Col>
