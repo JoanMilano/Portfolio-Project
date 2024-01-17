@@ -54,9 +54,9 @@ return (
               </Nav>
               <span className="navbar-text">
                 <div className="social-icon">
-                    <a href="">  <img src={navIcon1} alt="linkedIn link"></img></a>
-                    <a href="">  <img src={navIcon2} alt="facebook link"></img></a>
-                    <a href="">  <img src={navIcon3} alt="instagram link"></img></a>
+                    <a href="https://www.linkedin.com/in/joan-milano-3b541b29b/" target="_blank">  <img src={navIcon1} alt="linkedIn link"></img></a>
+                    <a href="https://github.com/JoanMilano" target="_blank">  <img src={navIcon2} alt="Github link"></img></a>
+                    <a href="https://www.instagram.com/jones_codes/" target="_blank">  <img src={navIcon3} alt="Instagram link"></img></a>
                 </div>
                 <button className="connect-button"><a  href="#get-in-touch"><span>Let's Connect</span></a></button>
               </span>

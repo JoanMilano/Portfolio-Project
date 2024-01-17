@@ -18,11 +18,11 @@ export const Skills =  () => {
           items: 3
         },
         tablet: {
-          breakpoint: { max: 1024, min: 464 },
+          breakpoint: { max: 1024, min: 768 },
           items: 2
         },
         mobile: {
-          breakpoint: { max: 464, min: 0 },
+          breakpoint: { max: 768, min: 0 },
           items: 1
         }
       };
@@ -34,8 +34,7 @@ export const Skills =  () => {
            <Col>
             <div className='skill-bx'>
               <h2>Capabilities</h2>
-               <p>
-Mastering SEO for heightened online visibility, I excel in crafting impactful brand identities. Proficient in strategic social media management, I bring a creative touch to UI/UX design, and possess extensive experience in seamless e-commerce development. A versatile professional, I drive comprehensive digital strategies for business growth across diverse domains.</p>
+               <p>Starting out primarily as a UI/UX designer and developer aimed at building, customizing, and optimizing my clients online stores with a creative and comprehensive touch. I found interest in the skills surrounding digital marketing enabling me to give my client a round scope of the services they need for their business. Listed below are the skills I've become proficient in, and would be honored to gain experience with, while working on your masterpiece.</p>
                <Carousel responsive={responsive} infinite={true} className='skills-slider'>
                 <div className='item'>
                     <img src={meter1} alt='Image' />
@@ -55,7 +54,7 @@ Mastering SEO for heightened online visibility, I excel in crafting impactful br
                 </div>
                 <div className='item'>
                     <img src={meter1} alt='Image' />
-                    <h5>e-commerce</h5>
+                    <h5>E-Commerce</h5>
                 </div>
                </Carousel>
                </div>

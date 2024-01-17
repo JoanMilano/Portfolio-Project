@@ -67,7 +67,7 @@ export const Banner = () => {
                         <span className="tagline">Welcome to my Portfolio</span>
                     <h1>{`Hello I am Jones`}</h1>
                     <h2 className="wrap">| {text}</h2>
-                    <p>Elevate your brand with a skilled freelance digital marketer and web developer. Crafting strategic digital campaigns, optimizing SEO, managing social media, and building dynamic websites. Experience a comprehensive online presence that not only captivates but also converts. Let's synergize marketing prowess with web development for unparalleled digital success.</p>
+                    <p>Boost your brand's impact with a versatile freelance web developer and designer. Also proficient in essential tech skills for digital marketing such as SEO and social media management. Achieve a compelling online presence that captivates your audience. </p>
                    <button>Let's connect<a href="#get-in-touch"><ArrowRightCircle size={25}/></a></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
