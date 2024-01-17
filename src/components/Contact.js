@@ -99,7 +99,7 @@ setButtonText("Send"); // when done sending set button back send
                                     {
                                         status.message && 
                                         <Col>
-                                         <p className={status.success === false ? 'danger' : 'success'}>{status.message} </p>
+                                         <p className={`alert ${status.success === false ? 'alert-danger' : 'alert-success'}`}>{status.message}</p>
                                         </Col>
                                     }
                                 </Row>
