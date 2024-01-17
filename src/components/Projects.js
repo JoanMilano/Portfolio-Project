@@ -10,21 +10,21 @@ export const Projects = () => {
   const firstProjTab = [
     {
       title: "My Own Portfolio",
-      description: "Design & Development",
+      description: "UI/UX Design & Development",
       imgUrl: portProjImg,
     },
   ]
   const secondProjTab = [
     {
       title: "Business Startup",
-      description: "Design & Development",
+      description: "Brand Identity & E-Commerce",
       imgUrl: projImg2,
     }
   ]
   const thirdProjTab = [
     {
       title: "Business Startup",
-      description: "Design & Development",
+      description: "SEO & Social Media Management",
       imgUrl: projImg3,
     },
   ];
