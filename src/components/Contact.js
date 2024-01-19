@@ -95,6 +95,7 @@ setButtonText("Send"); // when done sending set button back send
                                     <Col>
                                      <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)} />
                                     </Col>
+                                    <Row>
                                     <Col>
                                     <button type="submit"><span>{buttonText}</span></button>
                                     {
@@ -104,6 +105,7 @@ setButtonText("Send"); // when done sending set button back send
                                         </Col>
                                     }
                                     </Col>
+                                    </Row>
                                 </Row>
                             </form>
                         </Col>
