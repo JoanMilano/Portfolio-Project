@@ -25,7 +25,7 @@ to a different origin/domain.
 
 import { useState } from "react";
 import { Container, Row, Col } from 'react-bootstrap'; 
-import contactImg from '../assets/imgs/contact-img.svg'; 
+import contactImg from '../assets/imgs/ContantImg.avif'; 
 
 export const Contact = () => {
     const formInitialDetails = {
