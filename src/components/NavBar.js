@@ -8,7 +8,7 @@ this cause increasing memory usage and slower and worse performance
 */
 import { useState, useEffect } from 'react'; 
 import { Navbar, Container, Nav } from "react-bootstrap"
- import logo from '../assets/imgs/logo.webp'
+ import logo from '../assets/imgs/logoImg.avif'
 import navIcon1 from '../assets/imgs/nav-icon1.svg'
 import navIcon2 from '../assets/imgs/nav-icon2.svg'
 import navIcon3 from '../assets/imgs/nav-icon3.svg'
@@ -44,7 +44,7 @@ return (
             <img src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
-            <span className="navbar-toggler-icon"></span>
+            <span className={scrolled ? "toggle-scrolled navbar-toggler-icon" : "navbar-toggler-icon"}></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
