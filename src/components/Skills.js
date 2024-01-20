@@ -6,7 +6,6 @@ import brandIdentityImg from '../assets/imgs/BrandIdentityImg.avif';
 import solMedManImg from '../assets/imgs/SolMedManImg.avif'; 
 import uiUxImg from '../assets/imgs/UI_UXImg.avif'; 
 import eComImg from '../assets/imgs/EComImg.avif'; 
-import colorSharp from '../assets/imgs/color-sharp.png'
 
 
 export const Skills =  () => {
@@ -63,7 +62,6 @@ export const Skills =  () => {
              </Col>
             </Row> 
           </Container>
-          <img className='background-image-left' src={colorSharp} alt="Background Color" />
         </section>
       )
 
