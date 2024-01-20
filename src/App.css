@@ -309,7 +309,7 @@ nav.navbar {
   .txt-rotate > .wrap {
     border-right: 0.08em solid #666;
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 767px) {
     .banner img {
       width: 300px; 
       margin-left: 40%;
@@ -333,9 +333,10 @@ nav.navbar {
   .skill h2 {
       font-size: 45px;
       font-weight: 700;
+      color: var(--accent-color1);
   }
   .skill p {
-      color: #B8B8B8;
+      color: #ffffff;
       font-size: 18px;
       letter-spacing: 0.8px;
       line-height: 1.5em;
@@ -363,6 +364,7 @@ nav.navbar {
       font-size: 45px;
       font-weight: 700;
     text-align: center;
+    color: var(--accent-color1);
   }
   .project p {
     color: #B8B8B8;
@@ -387,7 +389,7 @@ nav.navbar {
     background-color: transparent;
     border-radius: 0;
     padding: 17px 0;
-    color: #fff;
+    color: var(--accent-color1);
     width: 100%;
     font-size: 17px;
     letter-spacing: 0.8px;
@@ -437,7 +439,7 @@ nav.navbar {
   }
   .proj-imgbx::before {
     content: "";
-    background: linear-gradient(90.21deg, #456E45 -5.91%, #163020 111.58%);
+    background: linear-gradient(90.21deg, var(--background-color4) -5.91%, var(--background-color3) 111.58%);
     opacity: 0.85;
     position: absolute;
     width: 100%;
@@ -554,8 +556,20 @@ nav.navbar {
 .footer {
   width: 100%;
   background-color: #111d11;
-  padding: 20px 20px 20px 200px;
+  padding: 5% 2% 2% 5%;
 }
 .footer-icons {
-  margin: 15px 5px 20px 200px;
+  margin-top: 10%;
+  margin-left: 50%; 
+  position: absolute; 
+  width: 40%; 
+}
+.footer-text {
+  color: var(--accent-color1);
+}
+@media screen and (min-width: 980px) {
+ .footer-icons {
+    bottom: 3%; 
+    left: 25%;
+ }
 }
