@@ -17,7 +17,7 @@ managing subscriptioons
 
 import { useState, useEffect } from "react"; 
 import { Container, Row, Col } from "react-bootstrap"; 
-import headerImg from "../assets/imgs/header-img.svg";
+import headerImg from "../assets/imgs/bannerImg.avif";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 
 export const Banner = () => {
