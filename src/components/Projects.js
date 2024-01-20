@@ -3,7 +3,6 @@ import { ProjectCard } from "./ProjectCard";
 import portProjImg from "../assets/imgs/portProj-SS.avif";
 import projImg2 from "../assets/imgs/project-img2.png";
 import projImg3 from "../assets/imgs/project-img3.png";
-import colorSharp2 from "../assets/imgs/color-sharp2.png";
 
 export const Projects = () => {
 
@@ -98,7 +97,6 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="Background Color"></img>
     </section>
   )
 }
