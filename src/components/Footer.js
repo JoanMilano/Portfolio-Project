@@ -1,6 +1,7 @@
 import navIcon1 from '../assets/imgs/nav-icon1.svg'
 import navIcon2 from '../assets/imgs/nav-icon2.svg'
 import navIcon3 from '../assets/imgs/nav-icon3.svg'
+import footerImg from '../assets/imgs/footerImg.avif'
 
 export const Footer = () => {
     return (
@@ -18,6 +19,7 @@ export const Footer = () => {
                 <p>Email: joan.milano829@gmail.com</p>
                 <p>Phone: (530)-313-0357</p>
                 </div>
+                <img src={footerImg}></img>
         </section>
     )
 }
