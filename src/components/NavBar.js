@@ -6,6 +6,7 @@ this is what is called a memory leak, over-time with many memory leaks
 this cause increasing memory usage and slower and worse performance 
 
 */
+import React from 'react';
 import { useState, useEffect } from 'react'; 
 import { Navbar, Container, Nav } from "react-bootstrap"
 import logo from '../assets/imgs/logoImg.avif'
@@ -54,9 +55,9 @@ return (
               </Nav>
               <span className="navbar-text">
                 <div className="social-icon">
-                    <a href="https://www.linkedin.com/in/joan-milano-3b541b29b/" target="_blank">  <img src={navIcon1} alt="linkedIn link"></img></a>
-                    <a href="https://github.com/JoanMilano" target="_blank">  <img src={navIcon2} alt="Github link"></img></a>
-                    <a href="https://www.instagram.com/jones_codes/" target="_blank">  <img src={navIcon3} alt="Instagram link"></img></a>
+                    <a href="https://www.linkedin.com/in/joan-milano-3b541b29b/" target="_blank" rel="noreferrer">  <img src={navIcon1} alt="linkedIn link"></img></a>
+                    <a href="https://github.com/JoanMilano" target="_blank" rel="noreferrer">  <img src={navIcon2} alt="Github link"></img></a>
+                    <a href="https://www.instagram.com/jones_codes/" target="_blank" rel="noreferrer">  <img src={navIcon3} alt="Instagram link"></img></a>
                 </div>
                 <button className="connect-button"><a  href="#get-in-touch"><span>Let's Connect</span></a></button>
               </span>
