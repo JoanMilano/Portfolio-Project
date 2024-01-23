@@ -1,10 +1,12 @@
 :root {
   --accent-color1: #7fedb6; 
   --accent-color2: #0e3b31; 
+  --accent-color3: #c9ffed; 
   --background-color1: #32e0c6b1; 
   --background-color2: #0a4638; 
-  --background-color4: #15393e; 
   --background-color3: #1d1940; 
+  --background-color4: #15393e; 
+  --background-color5: #0e1528; 
 
 }
 
@@ -65,7 +67,7 @@ nav.navbar {
   }
   nav.navbar.scrolled {
     padding: 0px 0;
-    background-color: var(--accent-color2);
+    background-color: var(--background-color5);
   }
   nav.navbar a.navbar-brand {
       width: 9%;
@@ -80,7 +82,7 @@ nav.navbar {
   }
   nav.navbar .navbar-nav .nav-link.navbar-link {
     font-weight: 400;
-    color: #fff !important;
+    color: var(--accent-color3) !important;
     letter-spacing: 0.8px;
     padding: 0 25px;
     font-size: 18px;
@@ -116,7 +118,7 @@ nav.navbar {
       width: 42px;
       height: 42px;
       position: absolute;
-      background-color: #ffffff;
+      background-color: var(--accent-color3);
       border-radius: 50%;
       transform: scale(0);
       transition: 0.3s ease-in-out;
@@ -134,8 +136,8 @@ nav.navbar {
   }
   .navbar-text button {
     font-weight: 700;
-    color: #fff;
-    border: 1px solid #fff;
+    color: var(--accent-color3);
+    border: 1px solid var(--accent-color3);
     padding: 18px 34px;
     font-size: 18px;
     margin-left: 18px;
@@ -152,7 +154,7 @@ nav.navbar {
     width: 0%;
     height: 100%;
     position: absolute;
-    background-color: #fff ;
+    background-color: var(--accent-color3) ;
     left: 0;
     top: 0;
     z-index: -1;
@@ -260,6 +262,7 @@ nav.navbar {
     line-height: 1;
     margin-bottom: 20px;
     display: block;
+    color: #fff;
   }
   .banner p {
     color: #ffffff;
@@ -336,7 +339,7 @@ nav.navbar {
       color: var(--accent-color1);
   }
   .skill p {
-      color: #ffffff;
+      color: var(--accent-color3);
       font-size: 18px;
       letter-spacing: 0.8px;
       line-height: 1.5em;
@@ -367,7 +370,7 @@ nav.navbar {
     color: var(--accent-color1);
   }
   .project p {
-    color: #B8B8B8;
+    color: var(--accent-color3);
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
@@ -489,6 +492,7 @@ nav.navbar {
       font-size: 45px;
       font-weight: 700;
     margin-bottom: 30px;
+    color: var(--accent-color3);
   }
   .contact form input, .contact form textarea {
     width: 100%;
@@ -519,11 +523,11 @@ nav.navbar {
   .contact form button {
     font-weight: 700;
     color: #000;
-    background-color: #fff;
+    background-color: var(--accent-color3);
     padding: 14px 48px;
     font-size: 18px;
     margin-top: 25px;
-    border-radius: 0;
+    border-radius: 30px;
     position: relative;
     transition: 0.3s ease-in-out;
     margin-bottom: 30px;
@@ -533,11 +537,11 @@ nav.navbar {
     position: relative;
   }
   .contact form button:hover {
-    color: #fff;
+    color: var(--accent-color3);
   }
   .contact form button::before {
     content: "";
-    background: #121212;
+    background: var(--accent-color2);
     width: 0;
     height: 100%;
     position: absolute;
@@ -555,21 +559,28 @@ nav.navbar {
 
 .footer {
   width: 100%;
-  background-color: #111d11;
-  padding: 5% 2% 2% 5%;
+  background-color: var(--background-color5);
 }
 .footer-icons {
   margin-top: 10%;
   margin-left: 50%; 
   position: absolute; 
   width: 40%; 
+  padding: 40px 20px 20px 20px; 
 }
 .footer-text {
-  color: var(--accent-color1);
+  color: var(--accent-color3);
+  padding: 30px 40px 0px 40px;
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 990px) {
  .footer-icons {
     bottom: 3%; 
     left: 25%;
  }
+}
+.footer img {
+  margin: 0px;
+  padding: 0px;
+  height: 90px;
+  width: 100%;
 }
