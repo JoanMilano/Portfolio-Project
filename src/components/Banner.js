@@ -41,6 +41,7 @@ export const Banner = () => {
     
             return () => { clearInterval(ticker)};  // clean code and avoid memory leak
      
+            // eslint-disable-next-line
     }, [text]) // (useEffect value) when this changes the effect is re-run
 
     const tick = () => {
