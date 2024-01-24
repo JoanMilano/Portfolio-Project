@@ -14,7 +14,7 @@ managing subscriptioons
 
 */ 
 
-
+import React from "react";
 import { useState, useEffect } from "react"; 
 import { Container, Row, Col } from "react-bootstrap"; 
 import headerImg from "../assets/imgs/bannerImg.avif";
@@ -23,7 +23,13 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0); 
     const [isDeleting, setIsDeleting] = useState(false); 
-    const toRotate = [ "Web Dev. & Design", "E-Commerce", "Digital Marketing", "SEO", "Social Media Management", "UI/UX Designer" ]; 
+    const toRotate = [ 
+        "Web Dev. & Design", 
+        "E-Commerce", 
+        "Digital Marketing",
+         "SEO", 
+         "Social Media Management", 
+         "UI/UX Designer" ]; 
     const [text, setText] = useState(''); 
     const [pace, setPace] = useState(300 - Math.random() * 100);  
     const pause = 2000; 
@@ -65,7 +71,7 @@ export const Banner = () => {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">Welcome to my Portfolio</span>
-                    <h1>{`Hello I am Jones`}</h1>
+                    <h1>{`Hello I'm Joan Milano`}</h1>
                     <h2 className="wrap">| {text}</h2>
                     <p>Boost your brand's impact with a versatile freelance web developer and designer. Also proficient in essential tech skills for digital marketing such as SEO and social media management. Achieve a compelling online presence that captivates your audience. </p>
                    <button>Let's connect<a href="#get-in-touch"><ArrowRightCircle size={25}/></a></button>

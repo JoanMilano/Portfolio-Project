@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import portProjImg from "../assets/imgs/portProj-SS.avif";

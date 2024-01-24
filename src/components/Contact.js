@@ -22,7 +22,7 @@ to a different origin/domain.
  
 */ 
 
-
+import React from 'react';
 import { useState } from "react";
 import { Container, Row, Col } from 'react-bootstrap'; 
 import contactImg from '../assets/imgs/ContantImg.avif'; 

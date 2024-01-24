@@ -272,7 +272,7 @@ nav.navbar {
     width: 96%;
   }
   .banner button {
-    color: #194a4e;
+    color: var(--background-color5);
     font-weight: 700;
     font-size: 20px;
     margin-top: 40px;
@@ -296,7 +296,9 @@ nav.navbar {
       text-decoration: none; /* Remove underline on hover */
   }
   .banner img {
-    animation: updown 3s linear infinite;
+    animation: updown 4s linear infinite;
+    padding-top: 20px;
+    margin-bottom: 0px;
   }
   @keyframes updown {
       0% {
@@ -542,6 +544,7 @@ nav.navbar {
   .contact form button::before {
     content: "";
     background: var(--accent-color2);
+    border-radius: 30px;
     width: 0;
     height: 100%;
     position: absolute;

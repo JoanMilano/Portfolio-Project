@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel'; 
 import 'react-multi-carousel/lib/styles.css';
@@ -38,23 +39,23 @@ export const Skills =  () => {
                <p>Originally focused on UI/UX design and development, my expertise lies in crafting, customizing, and optimizing online stores with a creative flair. My journey led me to digital marketing skills, providing clients with a holistic business solution. Here is a snapshot of skills i've acquired and look forward to applying in your project.</p>
                <Carousel responsive={responsive} infinite={true} className='skills-slider'>
                 <div className='item'>
-                    <img src={SEOImg} alt='Image' />
+                    <img src={SEOImg} alt='Descriptive Image' />
                     <h5>SEO</h5>
                 </div>
                 <div className='item'>
-                    <img src={brandIdentityImg} alt='Image' />
+                    <img src={brandIdentityImg} alt='Correlated Description' />
                     <h5>Brand identity</h5>
                 </div>
                 <div className='item'>
-                    <img src={solMedManImg} alt='Image' />
+                    <img src={solMedManImg} alt='Correlated Description' />
                     <h5>Social Media Managment</h5>
                 </div>
                 <div className='item'>
-                    <img src={uiUxImg} alt='Image' />
+                    <img src={uiUxImg} alt='Correlated Description' />
                     <h5>UI/UX Design & Development</h5>
                 </div>
                 <div className='item'>
-                    <img src={eComImg} alt='Image' />
+                    <img src={eComImg} alt='Correlated Description' />
                     <h5>E-Commerce Development & Managment</h5>
                 </div>
                </Carousel>
