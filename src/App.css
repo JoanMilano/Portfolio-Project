@@ -544,6 +544,7 @@ nav.navbar {
   .contact form button::before {
     content: "";
     background: var(--accent-color2);
+    border-radius: 30px;
     width: 0;
     height: 100%;
     position: absolute;
