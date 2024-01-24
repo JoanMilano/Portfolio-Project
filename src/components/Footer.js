@@ -17,8 +17,8 @@ export const Footer = () => {
                 <div className='footer-text'>
                 <p>Thank you for your business</p>
                 <p>Produced with React, Bootstrap, & Express</p>
-                <p>Tested with jest, ___, and ___</p>
-                <p>Checkout my github for the full skillstack</p>
+                <p>Tested with jest, lighthouse, and more</p>
+                <p>Checkout my github for the full stack for this project. </p>
                 <p>Email: joan.milano829@gmail.com</p>
                 <p>Phone: (530)-313-0357</p>
                 </div>
