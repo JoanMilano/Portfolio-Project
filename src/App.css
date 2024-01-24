@@ -296,7 +296,9 @@ nav.navbar {
       text-decoration: none; /* Remove underline on hover */
   }
   .banner img {
-    animation: updown 3s linear infinite;
+    animation: updown 4s linear infinite;
+    padding-top: 20px;
+    margin-bottom: 0px;
   }
   @keyframes updown {
       0% {
