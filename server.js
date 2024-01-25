@@ -30,7 +30,7 @@ const express = require("express"); // Express.js main library
 const router = express.Router(); // allows me to define routes 
 const cors = require("cors"); // implementing middleware for handling requests from dif origins
 const nodemailer = require("nodemailer"); // library for sending emails using Node.js
-
+const dotenv = require("dotenv"); // library for sending emails using Node.js 
 
 // set up express and middleware 
 const app = express(); // constant to apply express 
@@ -38,13 +38,14 @@ app.use(cors());
 app.use(express.json()); // parses incoming JSON data into JS 
 app.use("/", router); // defines a route 
 app.listen(3000, () => console.log("Server Running")); // listen on port 3000, logs message indicating server is running
+dotenv.config();
 
 // email address that emails will be sent to
 const contactEmail = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: "joan.milano829@gmail.com", // use own account
-      pass: "wqsy cybw rtxv dewf" // create application password in gmail (if 2-factor-authentication)
+      user: process.env.GMAIL_USER, // use own account
+      pass: process.env.GMAIL_PASS // create application password in gmail (if 2-factor-authentication)
     },
   });
 
