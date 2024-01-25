@@ -39,7 +39,7 @@ export const Skills =  () => {
                <p>Originally focused on UI/UX design and development, my expertise lies in crafting, customizing, and optimizing online stores with a creative flair. My journey led me to digital marketing skills, providing clients with a holistic business solution. Here is a snapshot of skills i've acquired and look forward to applying in your project.</p>
                <Carousel responsive={responsive} infinite={true} className='skills-slider'>
                 <div className='item'>
-                    <img src={SEOImg} alt='Descriptive Image' />
+                    <img src={SEOImg} alt='Correlated Description' />
                     <h5>SEO</h5>
                 </div>
                 <div className='item'>
