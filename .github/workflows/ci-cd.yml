@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "v20.9.0"
 
       - name: Install dependencies
         run: npm install
@@ -40,7 +40,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "v20.9.0"
 
       - name: Install dependencies
         run: npm install
@@ -53,8 +53,8 @@ jobs:
 
       - name: Deploy to Netlify
         run: | # | for multi-line script
-          npm netlify-cli deploy --prod
-          echo "Deploying..."
+          npm netlify-cli deploy --omit=dev
+           echo "Deploying..."
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           GMAIL_PASS: ${{ secrets.GMAIL_PASS }}
