@@ -1,17 +1,19 @@
 name: CI/CD
 
-on:
-  push:
-    branches:
+on: # when workflow should be triggered
+  push: # workflow is trigered on push event
+    branches: # what branch the push needs to happen on to be triggered
       - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # envirement?
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    steps: # contains list of steps
+      - name: Checkout repository # purpose of step
+        uses:
+          actions/checkout@v2 # the github action to be used
+          # checkout downloads my code to gihub actions
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -22,12 +24,24 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build
+        run: npm run build # run keyword executes shell command
 
       - name: Test
         run: npm test
 
-      - name: Deploy
-        run: |
-          echo "Deploying..."
-          # Add your deployment steps here
+    deploy:
+      needs: build
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v2
+
+        - name: Set up Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: "14"
+
+        - name: Deploy
+          run: | # | for multi-line script
+            echo "Deploying..."
