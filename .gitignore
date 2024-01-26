@@ -30,3 +30,6 @@ yarn-error.log*
 node_modules/
 build/
 .DS_Store
+
+# Local Netlify folder
+.netlify
