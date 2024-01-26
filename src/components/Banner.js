@@ -44,7 +44,7 @@ export const Banner = () => {
             // eslint-disable-next-line
     }, [text]) // (useEffect value) when this changes the effect is re-run
 
-    const tick = () => {
+    const tick = () => { 
         let i = loopNum % toRotate.length; 
         let fullText = toRotate[i];
         let updatedText = isDeleting ? 
