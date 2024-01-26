@@ -1,19 +1,19 @@
 name: CI/CD
 
 on: # when workflow should be triggered
-  push: # workflow is trigered on push event
+  push: # workflow is triggered on push event
     branches: # what branch the push needs to happen on to be triggered
       - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest # envirement?
+    runs-on: ubuntu-latest # environment?
 
-    steps: # contains list of steps
+    steps: # contains a list of steps
       - name: Checkout repository # purpose of step
         uses:
-          actions/checkout@v2 # the github action to be used
-          # checkout downloads my code to gihub actions
+          actions/checkout@v2 # the GitHub action to be used
+          # checkout downloads my code to GitHub actions
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -29,33 +29,33 @@ jobs:
       - name: Test
         run: npm test
 
-    deploy:
-      needs: build
-      runs-on: ubuntu-latest
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
 
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v2
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-        - name: Set up Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: "18"
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
 
-        - name: Install dependencies
-          run: npm install
+      - name: Install dependencies
+        run: npm install
 
-        - name: Install Netlify CLI
-          run: npm install -g netlify-cli
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
 
-        - name: Build
-          run: npm run build
+      - name: Build
+        run: npm run build
 
-        - name: Deploy to Netlify
-          run: | # | for multi-line script
-            npm netlify-cli deploy --prod
-            echo "Deploying..."
-          env:
-            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-            GMAIL_PASS: ${{ secrets.GMAIL_PASS }}
-            GMAIL_USER: ${{ secrets.GMAIL_USER }}
+      - name: Deploy to Netlify
+        run: | # | for multi-line script
+          npm netlify-cli deploy --prod
+          echo "Deploying..."
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          GMAIL_PASS: ${{ secrets.GMAIL_PASS }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
