@@ -53,7 +53,7 @@ jobs:
 
       - name: Deploy to Netlify
         run: | # | for multi-line script
-          npm netlify-cli deploy --prod
+          npm netlify-cli deploy --omit=dev
            echo "Deploying..."
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
