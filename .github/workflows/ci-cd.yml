@@ -51,9 +51,13 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to Netlify
+      - name: Log in to Netlify
+        run: npx netlify login
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
+      - name: Link to Netlify Site and Deploy
         run: | # | for multi-line scripts
-          npx netlify login -u $NETLIFY_AUTH_TOKEN
           npx netlify link --name lively-trifle-64b2f9 --site-id 5bd591a8-71f8-478c-a346-98d9762017ce
           npx netlify deploy --prod 
            echo "Deploying..."
