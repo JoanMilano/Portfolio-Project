@@ -46,14 +46,14 @@ jobs:
         run: npm install
 
       - name: Install Netlify CLI
-        run: npx install -g netlify-cli@latest
+        run: npx install netlify-cli@latest -g
 
       - name: Build
         run: npm run build
 
       - name: Deploy to Netlify
         run: | # | for multi-line scripts
-          npx netlify deploy --prod
+          npx netlify deploy --prod 
            echo "Deploying..."
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
