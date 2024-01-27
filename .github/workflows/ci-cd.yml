@@ -46,7 +46,7 @@ jobs:
         run: npm install
 
       - name: Install Netlify CLI
-        run: npx install netlify-cli@latest -g
+        run: npm install -g netlify-cli@latest
 
       - name: Build
         run: npm run build
