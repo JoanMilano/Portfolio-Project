@@ -52,7 +52,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to Netlify
-        run: | # | for multi-line script
+        run: | # | for multi-line scripts
           npx netlify deploy --prod
            echo "Deploying..."
         env:
