@@ -56,13 +56,11 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
 
-      - name: Link to Netlify Site and Deploy
-        run: | # | for multi-line scripts
-          npx netlify link --name lively-trifle-64b2f9 
-          npx netlify deploy --prod 
-           echo "Deploying..."
+      - name: Deploy to Netlify
+        run: |
+          npx netlify deploy --prod
+          echo "Deploying..."
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: 5bd591a8-71f8-478c-a346-98d9762017ce
           GMAIL_PASS: ${{ secrets.GMAIL_PASS }}
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
