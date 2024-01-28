@@ -58,7 +58,7 @@ jobs:
 
       - name: Deploy to Netlify
         run: |
-          npx netlify deploy --prod --site business-portfolio-project
+          npx netlify deploy --prod 
           echo "Deploying..."
         env:
           NETLIFY_SITE_ID: 5bd591a8-71f8-478c-a346-98d9762017ce
