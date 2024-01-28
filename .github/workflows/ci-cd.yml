@@ -57,7 +57,7 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
 
       - name: Link to Netlify Site
-        run: npx netlify link --name lively-trifle-64b2f9
+        run: npx netlify link --name business-portfolio-project
         env:
           NETLIFY_SITE_ID: 5bd591a8-71f8-478c-a346-98d9762017ce
 
