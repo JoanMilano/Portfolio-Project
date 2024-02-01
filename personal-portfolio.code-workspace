@@ -1,13 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../react-basics"
-		},
-		{
-			"path": "../JavaScript Projects"
-		}
-	]
+  "folders": [
+    {
+      "path": "."
+    }
+  ]
 }
