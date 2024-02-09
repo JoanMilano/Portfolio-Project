@@ -18,7 +18,7 @@ export const Footer = () => {
                 <p>Thank you for your business</p>
                 <p>Produced with React, Bootstrap, & Express</p>
                 <p>Tested with jest, lighthouse, and more</p>
-                <p>Checkout my github for the full stack for this project. </p>
+                <p>Checkout my <a href='https://github.com/JoanMilano' target="_blank" rel="noreferrer" className='github-link'>github</a> for all my projects. </p>
                 <p>Email: joan.milano829@gmail.com</p>
                 <p>Phone: (530)-313-0357</p>
                 </div>
