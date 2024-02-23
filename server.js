@@ -20,8 +20,8 @@ const PORT = 3001 ;
 const contactEmail = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.GMAIL_USER, // clients email
-      pass: process.env.GMAIL_PASS // clients email token key
+      user: process.env.GMAIL_USER, 
+      pass: process.env.GMAIL_PASS
     },
   });
 
@@ -46,7 +46,7 @@ const contactEmail = nodemailer.createTransport({
 
     const mail = {
       from: name,
-      to: "joan.milano829@gmail.com", // clients email 
+      to: "joan.milano829@gmail.com",
       subject: "Contact Form Submission - Black Salve",
       html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>

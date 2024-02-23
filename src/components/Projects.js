@@ -2,16 +2,16 @@ import React from 'react';
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import portProjImg from "../assets/imgs/portProj-SS.avif";
-import projImg2 from "../assets/imgs/project-img2.png";
-import projImg3 from "../assets/imgs/project-img3.png";
+import projImg2 from "../assets/imgs/project-img2.avif";
+import salveImg from "../assets/imgs/salveImg.avif";
 
 export const Projects = () => {
 
   const firstProjTab = [
     {
-      title: "My Own Portfolio",
-      description: "UI/UX Design & Development",
-      imgUrl: portProjImg,
+      title: "Small bussiness eCommerce website",
+      description: "UI/UX Design & Development with eCommerce functionalities",
+      imgUrl: salveImg,
     },
   ]
   const secondProjTab = [
@@ -23,9 +23,9 @@ export const Projects = () => {
   ]
   const thirdProjTab = [
     {
-      title: "Business Startup",
-      description: "SEO & Social Media Management",
-      imgUrl: projImg3,
+      title: "My Own Portfolio",
+      description: "UI/UX Design & Development",
+      imgUrl: portProjImg,
     },
   ];
 
@@ -36,7 +36,7 @@ export const Projects = () => {
           <Col size={12}>
               <div>
                 <h2>Projects</h2>
-                <p>Explore clients whose visions I brought to life by seamlessly addressing their digital needs. Additionally, find personal projects showcasing my skill practice and utility.</p>
+                <p>Explore clients whose visions I brought to life by seamlessly addressing their digital needs. Click on one to visit their hand-crafted website..</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
