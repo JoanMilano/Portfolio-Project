@@ -1,55 +1,30 @@
-/* 
-server file used to send the form the 
-user inputs in portfolio to my email 
+const express =  require("express"); 
+const router = express.Router(); 
+const cors = require("cors"); 
+const nodemailer = require("nodemailer"); 
+const dotenv = require("dotenv"); 
 
-general questions: 
-1. how deos this backend server run in relation to my front-end web app?
-
-node.js uses:
-back-end for SPA's
-creating web servers 
-high preformance API's development
-event driven architecture & support websockets for real-time app.
-microservices 
-data streaming 
-data processing & manipulation 
-auto. & scripting 
-IoT
-proxy servers 
-CMS (Content Management Systems)
-choice for serverless computing platform ex: AWS or Lambda
-
-
-
-JSON (Javascript Object Notation): both
-user & computer can read, turned into a string 
-then back to JS object b4 executed
-*/
-// importing modules we are using
-const express = require("express"); // Express.js main library
-const router = express.Router(); // allows me to define routes 
-const cors = require("cors"); // implementing middleware for handling requests from dif origins
-const nodemailer = require("nodemailer"); // library for sending emails using Node.js
-const dotenv = require("dotenv"); // library for sending emails using Node.js 
-
-// set up express and middleware 
-const app = express(); // constant to apply express 
-app.use(cors());
-app.use(express.json()); // parses incoming JSON data into JS 
-app.use("/", router); // defines a route 
-app.listen(3000, () => console.log("Server Running")); // listen on port 3000, logs message indicating server is running
+const app = express(); 
+app.use(express.json()); 
+app.use(cors({
+  origin: 'http://localhost:3000'
+}));
+app.use("/", router); 
 dotenv.config();
+const PORT = 3001 ;
+  app.listen(PORT, () => {
+    console.log(`Email server listening at http://localhost:${PORT}/`);
+  });
 
-// email address that emails will be sent to
+
 const contactEmail = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.GMAIL_USER, // use own account
-      pass: process.env.GMAIL_PASS // create application password in gmail (if 2-factor-authentication)
+      user: process.env.GMAIL_USER, // clients email
+      pass: process.env.GMAIL_PASS // clients email token key
     },
   });
 
-  // verify if email is connected
   contactEmail.verify((error) => {
     if (error) {
       console.log(error);
@@ -58,7 +33,6 @@ const contactEmail = nodemailer.createTransport({
     }
   });
   
-  // formatting data from body to mail format 
   router.post("/contact", (req, res) => {
     try {
     const name = req.body.firstName + req.body.lastName;
@@ -72,21 +46,20 @@ const contactEmail = nodemailer.createTransport({
 
     const mail = {
       from: name,
-      to: "joan.milano829@gmail.com",
-      subject: "Contact Form Submission - Portfolio",
+      to: "joan.milano829@gmail.com", // clients email 
+      subject: "Contact Form Submission - Black Salve",
       html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
              <p>Phone: ${phone}</p>
              <p>Message: ${message}</p>`,
     };
 
-    // express server sends email via node mailer
     contactEmail.sendMail(mail, (error) => {
         if (error) {
           console.log("Error sending email", error); 
-          res.status(500).json({ code: 500, status: "Error sending email" });  // if its error we send back error
+          res.status(500).json({ code: 500, status: "Error sending email" }); 
         } else {
-          res.status(200).json({ code: 200, status: "Message Sent" }); // if successful send verification code and status = Message Sent 
+          res.status(200).json({ code: 200, status: "Message Sent" });
         }
       });
     }   catch (error) {
