@@ -1,4 +1,18 @@
+/*
+setInterval : callBack method that calls provided function at specific intervals
+uses: 
+Animation (updating display at regular intervals creating motion)
+Polling (checking updates/new data from a server at specified intervals)
+Periodic Tasks (preforming tasks needed to be executed periodically ex: refreshing content)
 
+useEffect: React hook that preforms/handles side effects 
+ex: 
+setting/cleaning up rescources
+fetching data
+updating the DOM
+managing subscriptioons
+
+*/ 
 
 import React from "react";
 import { useState, useEffect } from "react"; 
@@ -23,12 +37,12 @@ export const Banner = () => {
     useEffect(() => { 
         let ticker = setInterval(() => { 
             tick(); 
-            }, pace) 
+            }, pace) // (setInterval value) 
     
-            return () => { clearInterval(ticker)};  
+            return () => { clearInterval(ticker)};  // clean code and avoid memory leak
      
             // eslint-disable-next-line
-    }, [text]) 
+    }, [text]) // (useEffect value) when this changes the effect is re-run
 
     const tick = () => { 
         let i = loopNum % toRotate.length; 

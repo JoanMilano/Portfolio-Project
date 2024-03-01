@@ -1,3 +1,11 @@
+/*
+memory leaks: the computors program (like a container) allocates
+memory to functions (event listeners/DOM elements) temporarily, 
+which will be returned when the function is finished, if its not, 
+this is what is called a memory leak, over-time with many memory leaks
+this cause increasing memory usage and slower and worse performance 
+
+*/
 import React from 'react';
 import { useState, useEffect } from 'react'; 
 import { Navbar, Container, Nav } from "react-bootstrap"
@@ -21,7 +29,7 @@ export const NavBar = () => {
       }
     }
 
-    window.addEventListener("scroll", onScroll); 
+    window.addEventListener("scroll", onScroll); // window === webpage. global JS variable
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [])

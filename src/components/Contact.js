@@ -1,3 +1,27 @@
+/* using 3 mail packages: 
+CORS (Cross-Origin Resource Sharing): 
+middleware for Express.js (back-end) and 
+react (front-end). allows/blocks web. apps.
+running on 1 origin/domain to make requests 
+to a different origin/domain.
+
+ Exress.js: Web app. framework for Node.js.
+ Simplifies back-end development by providing 
+ set of features for web and mobile applications. 
+ uses: create HTTP server that listens for requests
+ and routes them to the appropiate handlers 
+
+ Nodemailer: module for Node.js applications
+ that allows you to send emails. provides
+  easy-to-use API, supports various email 
+  services & protocols. uses: create transporter
+ (object responsible for sending mail) and
+  sending an email with form data.
+
+
+ 
+*/ 
+
 import React from 'react';
 import { useState } from "react";
 import { Container, Row, Col } from 'react-bootstrap'; 
@@ -11,10 +35,10 @@ export const Contact = () => {
       phone: '',
       message: ''
     }
-    const endpointUrl = 'https://portfolio-project-1-a58v.onrender.com';
-const [formDetails, setFormDetails] = useState(formInitialDetails); 
-const [buttonText, setButtonText] = useState('Send');   
-const [status, setStatus] = useState({}); 
+
+const [formDetails, setFormDetails] = useState(formInitialDetails); // changes as user fills out form 
+const [buttonText, setButtonText] = useState('Send');  // button default says send button after being clicked changes to sending 
+const [status, setStatus] = useState({}); // if or if not message has been send successfully
 
 
 const onFormUpdate = (category, value) => {
@@ -24,24 +48,24 @@ const onFormUpdate = (category, value) => {
     })
 }
 
-const handleSubmit = async (e) => { 
-    e.preventDefault(); 
+const handleSubmit = async (e) => { // asynchronous programming !!???
+    e.preventDefault(); // so page deosnt reload when form is submitted
     setButtonText("Sending...");
-    let response = await fetch(endpointUrl + "/contact", {
-      method: "POST", 
+    let response = await fetch("http://localhost:3001/contact", { // path to server 
+      method: "POST", // sends HTTP POST request to server at ^^
       headers: {
-        "Content-Type": "application/json;charset=utf-8", 
+        "Content-Type": "application/json;charset=utf-8", // translates to JSON
       },
-      body: JSON.stringify(formDetails),
+      body: JSON.stringify(formDetails), // body is more concise id for the form details. why we need to stringify???
     });
 
-setButtonText("Send");
+setButtonText("Send"); // when done sending set button back send
  let result = await response.json();
- console.log(response); 
- setFormDetails(formInitialDetails); 
- if (result.code === 200) { 
+ console.log(response); // waiting for response in json formmat?? 
+ setFormDetails(formInitialDetails); // clear form 
+ if (result.code === 200) { // code from server when sent successfully 
     setStatus({ success: true, message: 'Message sent successfully.'}); 
- } else { 
+ } else { // didnt send back success
     setStatus({ success: false, message: 'Something went wrong.' })
  }
 };  

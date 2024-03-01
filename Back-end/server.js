@@ -20,19 +20,15 @@ dotenv.config();
 
 const PORT = process.env.PORT || 3001 ;
   app.listen(PORT, () => {
-    console.log(`Email server listening at http://localhost:${PORT}/`); 
+    console.log(`Email server listening at http://localhost:${PORT}/`);
   });
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
 
 const contactEmail = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: process.env.GMAIL_USER, // clients email
       pass: process.env.GMAIL_PASS // clients email token key
-
     },
   });
 
@@ -57,7 +53,7 @@ const contactEmail = nodemailer.createTransport({
 
     const mail = {
       from: name,
-      to: "joan.milano829@gmail.com",
+      to: "joan.milano829@gmail.com", // clients email 
       subject: "Contact Form Submission - Black Salve",
       html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
