@@ -7,11 +7,11 @@ const dotenv = require("dotenv");
 const app = express(); 
 app.use(express.json()); 
 app.use(cors({
-  origin: 'https://dev-milano.com/' // !!! replace for production
+  origin: 'https://dev-milano.com/'
 }));
 app.use("/", router); 
 dotenv.config();
-const PORT = 3001 ;
+const PORT = process.env.PORT || 3001 ;
   app.listen(PORT, () => {
     console.log(`Email server listening at http://localhost:${PORT}/`); // ? 
   });
