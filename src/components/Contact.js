@@ -35,7 +35,7 @@ export const Contact = () => {
       phone: '',
       message: ''
     }
-
+const serverURL = 'https://portfolio-project-1-a58v.onrender.com'
 const [formDetails, setFormDetails] = useState(formInitialDetails); // changes as user fills out form 
 const [buttonText, setButtonText] = useState('Send');  // button default says send button after being clicked changes to sending 
 const [status, setStatus] = useState({}); // if or if not message has been send successfully
@@ -51,7 +51,7 @@ const onFormUpdate = (category, value) => {
 const handleSubmit = async (e) => { // asynchronous programming !!???
     e.preventDefault(); // so page deosnt reload when form is submitted
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:3001/contact", { // path to server 
+    let response = await fetch(serverURL + "/contact", { // path to server 
       method: "POST", // sends HTTP POST request to server at ^^
       headers: {
         "Content-Type": "application/json;charset=utf-8", // translates to JSON
