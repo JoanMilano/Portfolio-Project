@@ -11,11 +11,14 @@ app.use(cors({
 }));
 app.use("/", router); 
 dotenv.config();
-const PORT = process.env.PORT || 3001 ;
+const PORT = process.env.PORT || 10000 ;
   app.listen(PORT, () => {
-    console.log(`Email server listening at http://localhost:${PORT}/`); // ? 
+    console.log(`Email server listening at http://localhost:${PORT}/`); 
   });
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 
 const contactEmail = nodemailer.createTransport({
     service: 'gmail',
