@@ -6,8 +6,13 @@ const dotenv = require("dotenv");
 
 const app = express(); 
 app.use(express.json()); 
+const allowedOrigins = [
+  'https://dev-milano.com/',
+  'https://www.dev-milano.com/',
+  'https://dev-milano.netlify.app/'
+];
 app.use(cors({
-  origin: 'https://dev-milano.com/'
+  origin: allowedOrigins
 }));
 app.use("/", router); 
 dotenv.config();
