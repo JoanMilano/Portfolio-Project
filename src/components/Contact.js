@@ -11,7 +11,7 @@ export const Contact = () => {
       phone: '',
       message: ''
     }
-
+    const endpointUrl = 'https://portfolio-project-1-a58v.onrender.com';
 const [formDetails, setFormDetails] = useState(formInitialDetails); 
 const [buttonText, setButtonText] = useState('Send');   
 const [status, setStatus] = useState({}); 
@@ -27,7 +27,7 @@ const onFormUpdate = (category, value) => {
 const handleSubmit = async (e) => { 
     e.preventDefault(); 
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:10000/contact", {
+    let response = await fetch(endpointUrl + "/contact", {
       method: "POST", 
       headers: {
         "Content-Type": "application/json;charset=utf-8", 
