@@ -10,11 +10,9 @@ const allowedOrigins = [
   'http://localhost:3000/',
   'https://dev-milano.com/',
   'https://www.dev-milano.com/',
-  'https://dev-milano.netlify.app/'
+  'https://dev-milano.netlify.app',
 ];
-app.use(cors({
-  origin: allowedOrigins
-}));
+app.use(cors());
 app.use("/", router); 
 dotenv.config();
 
