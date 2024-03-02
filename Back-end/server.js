@@ -12,7 +12,7 @@ const allowedOrigins = [
   'https://www.dev-milano.com/',
   'https://dev-milano.netlify.app',
 ];
-app.use(cors());
+app.use(cors('https://dev-milano.com/'));
 app.use("/", router); 
 dotenv.config();
 
