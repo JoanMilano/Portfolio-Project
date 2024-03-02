@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json()); 
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://dev-milano.com/',
+  'http://dev-milano.com/',
   'https://www.dev-milano.com/',
   'https://dev-milano.netlify.app/'
 ];
