@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json()); 
 const allowedOrigins = [
   'http://localhost:3000',
-  'http://dev-milano.com/',
+  'https://dev-milano.com/',
   'https://www.dev-milano.com/',
   'https://dev-milano.netlify.app/'
 ];
@@ -22,6 +22,12 @@ const PORT = process.env.PORT || 10000 ;
   app.listen(PORT, () => {
     console.log(`Email server listening at http://localhost:${PORT}/`);
   });
+
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
 
 
 const contactEmail = nodemailer.createTransport({
