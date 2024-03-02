@@ -50,7 +50,7 @@ const onFormUpdate = (category, value) => {
 const handleSubmit = async (e) => { // asynchronous programming !!???
     e.preventDefault(); // so page deosnt reload when form is submitted
     setButtonText("Sending...");
-    let response = await fetch("https://portfolio-project-1-a58v.onrender.com/contact", { // path to server 
+    let response = await fetch("https://portfolio-project-ffy1.onrender.com/contact", { // path to server 
       method: "POST", // sends HTTP POST request to server at ^^
       headers: {
         "Content-Type": "application/json;charset=utf-8", // translates to JSON

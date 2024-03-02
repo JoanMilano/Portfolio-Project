@@ -7,10 +7,11 @@ const dotenv = require("dotenv");
 const app = express(); 
 app.use(express.json()); 
 const allowedOrigins = [
-  'http://localhost:3000',
+  'http://localhost:3000/',
   'https://dev-milano.com/',
   'https://www.dev-milano.com/',
-  'https://dev-milano.netlify.app/'
+  'https://dev-milano.netlify.app/',
+  /https?:\/\/.*\.dev/
 ];
 app.use(cors({
   origin: allowedOrigins
@@ -18,7 +19,7 @@ app.use(cors({
 app.use("/", router); 
 dotenv.config();
 
-const PORT = process.env.PORT || 10000 ;
+const PORT = process.env.PORT || 3001 ;
   app.listen(PORT, () => {
     console.log(`Email server listening at http://localhost:${PORT}/`);
   });
