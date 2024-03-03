@@ -7,13 +7,11 @@ import footerImg from '../assets/imgs/footerImg.avif'
 export const Footer = () => {
     return (
         <section className="footer">
-              <span className="footer-icons">
-                <div className="social-icon">
+              <div className="social-icon social-footer">
                     <a href="https://www.linkedin.com/in/joan-milano-3b541b29b/" target="_blank" rel="noreferrer">  <img src={navIcon1} alt="linkedIn link"></img></a>
                     <a href="https://github.com/JoanMilano" target="_blank" rel="noreferrer">  <img src={navIcon2} alt="Github link"></img></a>
                     <a href="https://www.instagram.com/jones_codes/" target="_blank" rel="noreferrer">  <img src={navIcon3} alt="Instagram link"></img></a>
-                </div>
-                </span>
+                    </div>
                 <div className='footer-text'>
                 <p>Thank you for your business</p>
                 <p>Produced with React, Bootstrap, & Express</p>

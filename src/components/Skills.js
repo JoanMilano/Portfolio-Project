@@ -35,7 +35,7 @@ export const Skills =  () => {
           <Row> 
            <Col>
             <div className='skill-bx'>
-              <h2>Capabilities</h2>
+              <h2>Skills</h2>
                <p>Originally focused on UI/UX design and development, my expertise lies in crafting, customizing, and optimizing online stores with a creative flair. My journey led me to digital marketing skills, providing clients with a holistic business solution. Here is a snapshot of skills i've acquired and look forward to applying in your project.</p>
                <Carousel responsive={responsive} infinite={true} className='skills-slider'>
                 <div className='item'>
