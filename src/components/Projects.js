@@ -2,24 +2,25 @@ import React from 'react';
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import portProjImg from "../assets/imgs/portProj-SS.avif";
-import projImg2 from "../assets/imgs/project-img2.png";
+import salveProj from "../assets/imgs/salveProj.avif";
 import projImg3 from "../assets/imgs/project-img3.png";
 
 export const Projects = () => {
 
   const firstProjTab = [
     {
+      title: "Business Website Re-design & Development",
+      description: "Brand Identity & E-Commerce",
+      imgUrl: salveProj,
+      link: 'https://grandmashealingsalve.com/'
+    }
+  ]
+  const secondProjTab = [
+    {
       title: "My Own Portfolio",
       description: "UI/UX Design & Development",
       imgUrl: portProjImg,
     },
-  ]
-  const secondProjTab = [
-    {
-      title: "Business Startup",
-      description: "Brand Identity & E-Commerce",
-      imgUrl: projImg2,
-    }
   ]
   const thirdProjTab = [
     {
@@ -53,7 +54,7 @@ export const Projects = () => {
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
-                          firstProjTab.map((project, index) => {
+                          firstProjTab.map((project, index, link) => {
                             return (
                               <ProjectCard
                                 key={index}
